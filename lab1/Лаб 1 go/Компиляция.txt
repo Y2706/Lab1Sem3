@@ -1,0 +1,2 @@
+go build -o program
+./program --file data.txt --query "MARRAY myarray 5"

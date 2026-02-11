@@ -1,0 +1,110 @@
+Вывести содержимое любой структуры
+./dbms --file data.txt --query 'PRINT имя_структуры'
+
+Массив
+Создать массив из N элементов (все 0)
+./dbms --file data.txt --query 'MARRAY myarray 5'
+
+Добавить элемент в конец
+./dbms --file data.txt --query 'MADD myarray 10'
+
+Добавить элемент по индексу
+./dbms --file data.txt --query 'MINDEXADD myarray 2 25'
+
+Получить элемент по индексу
+./dbms --file data.txt --query 'MGET myarray 1'
+
+Удалить элемент по индексу
+./dbms --file data.txt --query 'MDELETE myarray 0'
+
+Заменить элемент по индексу
+./dbms --file data.txt --query 'MREPLACE myarray 1 99'
+
+Получить длину массива
+./dbms --file data.txt --query 'MLENGTH myarray'
+
+Односвязный список
+Добавить в начало
+./dbms --file data.txt --query 'FPUSH mylist элемент'
+
+Добавить в конец
+./dbms --file data.txt --query 'FADD_END mylist элемент'
+
+Добавить после существующего элемента
+./dbms --file data.txt --query 'FADD_AFTER mylist существующий новый'
+
+До
+./dbms --file data.txt --query 'FADD_BEFORE mylist C B'
+
+Удалить элемент по значению
+./dbms --file data.txt --query 'FDEL mylist значение'
+
+Проверить наличие элемента
+./dbms --file data.txt --query 'FGET mylist значение'
+
+Удаление головы
+./dbms --file data.txt --query 'FDEL_HEAD mylist'
+
+Удаление хвоста
+./dbms --file data.txt --query 'FDEL_TAIL mylist'
+
+Удаление перед C
+./dbms --file data.txt --query 'FDEL_BEFORE mylist C'
+
+Удаление после B
+./dbms --file data.txt --query 'FDEL_AFTER mylist B'
+
+Двусвязный список
+Добавить в начало
+./dbms --file data.txt --query 'LPUSH_LEFT mydlist элемент'
+
+Добавить в конец
+./dbms --file data.txt --query 'LPUSH_RIGHT mydlist элемент'
+
+Добавить перед существующим
+./dbms --file data.txt --query 'LADD_BEFORE mydlist существующий новый'
+
+Добавить после существующего
+./dbms --file data.txt --query 'LADD_AFTER mydlist существующий новый'
+
+Удалить элемент
+./dbms --file data.txt --query 'LDEL mydlist значение'
+
+Проверить наличие
+./dbms --file data.txt --query 'LGET mydlist значение'
+
+Удаление головы
+./dbms --file data.txt --query 'FDEL_HEAD mylist'
+
+Удаление хвоста
+./dbms --file data.txt --query 'FDEL_TAIL mylist'
+
+# Удаление после B
+./dbms --file data.txt --query 'FDEL_AFTER mylist B'
+
+Очередь
+Добавить в очередь (в конец)
+./dbms --file data.txt --query 'QPUSH myqueue элемент'
+
+Удалить из очереди (из начала)
+./dbms --file data.txt --query 'QPOP myqueue'
+
+Стек
+Добавить в стек (на вершину)
+./dbms --file data.txt --query 'SPUSH mystack элемент'
+
+Удалить из стека (с вершины)
+./dbms --file data.txt --query 'SPOP mystack'
+
+Дерево
+Добавить элемент в дерево
+./dbms --file data.txt --query 'TADD mytree значение'
+
+Поиск элемента
+./dbms --file data.txt --query 'TSEARCH mytree значение'
+
+Проверка на полноту дерева
+./dbms --file data.txt --query 'TISFULL mytree'
+
+Вывод дерева в виде дерева
+./dbms --file data.txt --query 'TPRINT mytree'
